@@ -1,0 +1,116 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base styles */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #333;
+  }
+  
+  h1, h2, h3 {
+    font-weight: normal;
+    margin-bottom: 0.5em;
+  }
+  
+  a {
+    color: #0074D9;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Layout styles */
+  header {
+    background-color: #F2F2F2;
+    padding: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav li {
+    margin-right: 1em;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 4em 0;
+    background-image: url('../img/https://www.foodandwine.com/thmb/Wd4lBRZz3X_8qBr69UOu2m7I2iw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: #0074D9;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+  }
+  
+  .feature {
+    width: 30%;
+    text-align: center;
+    padding: 2em;
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature img {
+    width: 50%;
+    margin-bottom: 1em;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+    }
+  
+    nav li {
+      margin-bottom: 0.5em;
+    }
+  
+    .features {
+      flex-wrap: wrap;
+    }
+  
+    .feature {
+      width: 100%;
+      margin-bottom: 2em;
+    }
+  }
+  

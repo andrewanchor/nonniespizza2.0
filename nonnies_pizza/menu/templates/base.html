@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Nonnie's Pizza{% endblock %}</title>
+    {% block styles %}
+    <link rel="stylesheet" href="{%  static 'mystyles.css' %}">
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/menu2">Menu</a></li>
+            <li><a href="/menu2/menu">Reservations</a></li>
+            <li><a href="/menu2/cart">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+    <footer>
+      &copy; 2023 Nonnie's Pizza. All rights reserved.
+    </footer>
+    {% block scripts %}
+    {% endblock %}
+  </body>
+</html>
