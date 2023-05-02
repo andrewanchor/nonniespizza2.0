@@ -59,7 +59,12 @@
               <button class="btn btn-primary" type="button" id="plus-btn">+</button>
             </div>
             <div class="mt-3">
-              <button type="submit" class="btn btn-primary">Add to Cart</button>
+             <!--<button type="submit" class="btn btn-primary">Add to Cart</button>-->
+              {% if request.user.is_authenticated %}
+                <a href="{% url 'add_to_cart' item.pk %}" class="btn btn-primary">Add to Cart</a>
+              {% else %}
+                <a href="{% url 'register' %}" class="btn btn-primary">Log in to Add to Cart</a>
+              {% endif %}
             </div>
           </div>
         </div>

@@ -49,10 +49,10 @@ def cart(request):
     return render(request, 'cart.html', context)
 
 @login_required
-def add_to_cart(request, product_id):
-    product = Item.objects.get(id=product_id)
+def add_to_cart(request, item_id):
+    product = Item.objects.get(id=item_id)
     user_cart, created = Cart.objects.get_or_create(user=request.user)
-    cart_item, created = CartItem.objects.get_or_create(cart=user_cart, product=product)
+    cart_item, created = CartItem.objects.get_or_create(cart=user_cart, item=product)
     if not created:
         cart_item.quantity += 1
         cart_item.save()
