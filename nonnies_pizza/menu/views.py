@@ -59,8 +59,8 @@ def add_to_cart(request, item_id):
     return redirect('cart')
 
 @login_required
-def remove_from_cart(request, cart_item_id):
-    cart_item = CartItem.objects.get(id=cart_item_id)
+def remove_from_cart(request, item_id):
+    cart_item = CartItem.objects.get(id=item_id)
     if cart_item.cart.user == request.user:
         if cart_item.quantity == 1:
             cart_item.delete()
