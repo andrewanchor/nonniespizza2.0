@@ -42,15 +42,15 @@
     <hr class="my-4">
     </div>
 
-
-  <div class="container bg-white">
+  <div class="container bg-dark text-white">
     {% for category in categories %}
     <h2 class="text-center mb-4">{{category.name}}</h2>
     <div class="row">
     {% for item in category.items.all %}
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="margherita1.jpg" class="card-img-top" alt="Pizza 1">
+          {% load static %}
+          <img src="{% static 'margherita1.jpg' %}" class="card-img-top" alt="Pizza 1">
           <div class="card-body">
             <h5 class="card-title">{{item.name}}</h5>
             <p class="card-text">{{item.description}}</p>
