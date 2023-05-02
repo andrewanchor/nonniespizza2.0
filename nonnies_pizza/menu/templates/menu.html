@@ -8,8 +8,7 @@
 
   <title>Nonnie's Brick Oven Pizzeria</title>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Nonnie's Brick Oven Pizzeria</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,14 +32,16 @@
       </div>
     </div>
   </nav>
-  <div class="jumbotron bg-white">
+  <div class="bg-dark text-white">
+
+  <div class="jumbotron bg-white text-dark">
     <h1 class="display-4 text-center">Nonnie's Brick Oven Pizzeria</h1>
     <p class="lead text-center">Order your favorite pizza online and enjoy a fast and reliable delivery service.</p>
     <hr class="my-4">
     </div>
 
 
-  <div class="container bg-white">
+  <div class="container bg-dark">
     {% for category in categories %}
     <h2 class="text-center mb-4">{{category.name}}</h2>
     <div class="row">
@@ -73,7 +74,7 @@
 </div>
 {% endfor %}
 </div>
-        <footer class="bg-light py-4">
+        <footer class="bg-dark text-white py-4">
         <div class="container text-center">
         <p>Copyright © 2023
         Nonnie's Brick Oven Pizzeria | All rights reserved</p>
