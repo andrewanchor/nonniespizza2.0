@@ -32,6 +32,7 @@ def register(request):
             return redirect('landing')
     else:
         form = UserCreationForm()
+        
     return render(request, 'register.html', {'form': form})
 
 
