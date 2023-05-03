@@ -6,6 +6,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 
+def my_view(request):
+    context = {'image_path': 'img/my_image.jpg'}
+    return render(request, 'my_template.html', context)
+
 def menu(request):
     categories = Category.objects.prefetch_related('items').all()
     template = loader.get_template('menu.html')
@@ -20,7 +24,8 @@ def menu(request):
 def landing(request):
     categories = Category.objects.prefetch_related('items').all()
     template = loader.get_template('landing.html')
-    context = {'categories': categories}
+    context = {'categories': categories,
+               'image_path': 'pizza.jpeg'}
     return HttpResponse(template.render(context, request))
 
 def register(request):
