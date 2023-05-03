@@ -2,9 +2,10 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template import loader
 from .models import Item,Category,MENU, Cart, CartItem
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import LoginView
 
 def my_view(request):
     context = {'image_path': 'img/my_image.jpg'}
@@ -74,3 +75,19 @@ def remove_from_cart(request, item_id):
             cart_item.quantity -= 1
             cart_item.save()
     return redirect('cart')
+
+def login_view(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('') # replace 'home' with the name of your home page URL pattern
+            else:
+                form.add_error(None, 'Invalid username or password.')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'login.html', {'form': form})
