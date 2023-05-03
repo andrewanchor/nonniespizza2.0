@@ -48,17 +48,21 @@
       width: 60%;
       margin: 10px auto;
     }
+    nav {
+      margin-left: 20%;
+      margin-right:20%;
+    }
   </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container-fluid bg-white">
-      <a class="navbar-brand" href="#">Nonnie's Brick Oven Pizzeria</a>
+      <a class="navbar-brand" href="">Nonnie's Brick Oven Pizzeria</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav me-auto">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="">Home</a>
           </li>
@@ -66,11 +70,13 @@
             <a class="nav-link" href="menu/">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="menu/register">Contact</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="menu/cart">Cart</a>
           </li> 
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/menu/register"><button class="btn btn-primary">Sign-in</button></a>
+          </li>
         </ul>
       </div>
     </div>
