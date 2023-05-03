@@ -58,7 +58,7 @@
             <hr>
             <p class="card-text mb-4">{{item.description}}</p>
             <p class="card-text">${{item.price}}</p>
-            <div class="input-group">
+            <div class="input-group mt-auto">
               <button class="btn btn-primary" type="button" id="minus-btn">-</button>
               
               <input type="number" class="form-control" value="1" min="1" max="20" aria-label="Item quantity" aria-describedby="minus-btn plus-btn">
@@ -68,6 +68,7 @@
              <!--<button type="submit" class="btn btn-primary">Add to Cart</button>-->
               {% if request.user.is_authenticated %}
                 <a href="{% url 'add_to_cart' item.pk %}" class="btn btn-primary">Add to Cart</a>
+                
               {% else %}
                 <a href="{% url 'register' %}" class="btn btn-primary">Log in to Add to Cart</a>
               {% endif %}
