@@ -9,9 +9,6 @@
 
   <title>Nonnie's Brick Oven Pizzeria</title>
   <style>
-    body {
-      background-color: white;
-    }
     .bg-image {
       background-image: url('{% static image_path %}');
       background-size: cover;
@@ -69,9 +66,6 @@
             <a class="nav-link" href="menu/">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="menu/register">Contact</a>
           </li>
           <li class="nav-item">
@@ -86,7 +80,7 @@
     <h1>Welcome to Nonnie's Brick Oven Pizzeria</h1>
     <hr class="line">
     <h2>Order your favorite pizza online and enjoy a fast and reliable delivery service.</h2>
-    <button class="btn btn-primary">Order Now</button>
+    <a class="nav-link" href="/menu"><button class="btn btn-primary">Order Now</button></a>
   </div>
   <div class="container mt-5 d-flex justify-content-center">
     <div class="col-md-8">
